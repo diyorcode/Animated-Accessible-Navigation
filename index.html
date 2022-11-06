@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Animated Accessible Navigation</title>
+  </head>
+  <body>
+    <div class="viewport">
+      <header class="header" role="banner">
+        <nav id="nav" class="nav" role="navigation">
+          <ul
+            class="nav__menu"
+            id="menu"
+            tabindex="-1"
+            aria-label="main navigation"
+            hidden
+          >
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Shop</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+          </ul>
+
+          <a
+            href="#nav"
+            class="nav__toggle"
+            role="button"
+            aria-expanded="false"
+            aria-controls="menu"
+          >
+            <svg
+              class="menuicon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 50 50"
+            >
+              <title>Toggle Menu</title>
+              <g>
+                <line
+                  class="menuicon__bar"
+                  x1="13"
+                  y1="16.5"
+                  x2="37"
+                  y2="16.5"
+                />
+                <line
+                  class="menuicon__bar"
+                  x1="13"
+                  y1="24.5"
+                  x2="37"
+                  y2="24.5"
+                />
+                <line
+                  class="menuicon__bar"
+                  x1="13"
+                  y1="24.5"
+                  x2="37"
+                  y2="24.5"
+                />
+                <line
+                  class="menuicon__bar"
+                  x1="13"
+                  y1="32.5"
+                  x2="37"
+                  y2="32.5"
+                />
+                <circle class="menuicon__circle" r="23" cx="25" cy="25" />
+              </g>
+            </svg>
+          </a>
+
+          <div class="splash"></div>
+        </nav>
+      </header>
+
+      <main class="main" role="main">
+        <div class="gallery" aria-label="gallery">
+          <a href="#" class="gallery__item"></a>
+          <a href="#" class="gallery__item"></a>
+          <a href="#" class="gallery__item"></a>
+          <a href="#" class="gallery__item"></a>
+          <a href="#" class="gallery__item"></a>
+          <a href="#" class="gallery__item"></a>
+        </div>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
